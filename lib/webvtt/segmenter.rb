@@ -70,13 +70,13 @@ module WebVTT
       # or if cue end in sec is > end of the segment in sec
       # we display it in the next segment as well
 
-      if (cue.length > @options[:length]) ||
-        (cue.end_in_sec > end_seg)
+      #if (cue.length > @options[:length]) ||
+      #  (cue.end_in_sec > end_seg)
 
-        (cue.length / @options[:length]).ceil.to_i.times.each do |s|
-          seg << seg.last + 1
-        end
-      end
+      #  (cue.length / @options[:length]).ceil.to_i.times.each do |s|
+      #    seg << seg.last + 1
+      #  end
+      #end
 
       return seg
     end
