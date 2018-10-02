@@ -60,7 +60,7 @@ module WebVTT
     def parse(content)
       # remove bom first
       content.gsub!("\uFEFF", '')
-
+      content.gsub!(/^\d\d/, "\n\n\\0")
       cues = content.split(/\n\n+/)
 
       @header = cues.shift
